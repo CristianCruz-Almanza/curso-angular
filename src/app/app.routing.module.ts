@@ -8,7 +8,6 @@ const routes: Routes = [
     { path: 'forecast/:zip', component: ForecastComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: SearchComponent, children: [
-      // Agrega otras rutas anidadas dentro de AppComponent si es necesario
     ]},
   ];
   @NgModule({

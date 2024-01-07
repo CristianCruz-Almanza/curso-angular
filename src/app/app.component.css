@@ -1,6 +1,6 @@
 .flex-container {
     display: flex;
-    justify-content: space-between; /* Distribuye los divs horizontalmente */
+    justify-content: space-between; 
     width: 100%;
   }
   

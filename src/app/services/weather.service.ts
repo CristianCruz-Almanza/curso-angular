@@ -7,8 +7,6 @@ import { Forecast } from '../interfaces/forecast.interface';
 })
 export class WeatherService {
 
-  // https://api.openweathermap.org/data/2.5/weather?q=United States&appid=5a4b2d457ecbef9eb2a71e480b947604
-
   constructor(
     private http: HttpClient
   ) { }

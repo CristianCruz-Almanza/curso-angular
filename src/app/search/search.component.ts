@@ -19,7 +19,6 @@ export class SearchComponent implements OnInit{
   })
 
   public weatherDataList: GetWeather[] = [];
-  //title = 'cursoAngular';
 
   constructor(
     private fb: UntypedFormBuilder,
