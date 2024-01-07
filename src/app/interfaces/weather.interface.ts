@@ -1,4 +1,5 @@
 export interface GetWeather {
+    codigoPostal?: string;
     coord:      Coord;
     weather:    Weather[];
     base:       string;

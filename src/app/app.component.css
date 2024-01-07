@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los divs horizontalmente */
+    width: 100%;
+  }
+  
+  .flex-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+  }
+  

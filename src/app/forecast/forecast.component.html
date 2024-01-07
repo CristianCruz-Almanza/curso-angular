@@ -1,0 +1,29 @@
+<form>
+    <div class="d-flex">
+      <div  class="mr-auto p-2">
+      </div>
+      <br>
+      <br>
+    </div>
+  <p-button class="btn btn-primary" (click)="redirigirAPaginaPrincipal()">Ir a la Página Principal</p-button>
+    <br>
+    <br>
+    <p-table [value]="forecastDataList" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Current condition</th>
+              <th>Temperature</th>
+              <th>Max today</th>
+              <th>Min today</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-weather let-i="index">
+        <tr>
+          <td>{{ weather.weather[0].main }}</td>
+          <td>{{ weather.main.temp}}</td>
+          <td>{{ weather.main.temp_max }}</td>
+          <td>{{ weather.main.temp_min }}</td>
+      </tr>
+      </ng-template>
+  </p-table>
+  </form>

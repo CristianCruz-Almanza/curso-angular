@@ -1,0 +1,57 @@
+<form [formGroup]="search">
+    <div class="d-flex">
+      <div  class="mr-auto p-2">
+        <p-button label="Agregar" (click)="onSubmit()"></p-button>
+        <input formControlName="inputValue" type="text" pInputText />
+      </div>
+      <br>
+      <br>
+    </div>
+    
+    <br>
+    <br>
+    <p-table [value]="weatherDataList" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Current condition</th>
+              <th>Temperature</th>
+              <th>Max today</th>
+              <th>Min today</th>
+              <th>Acciones</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-weather let-i="index">
+        <tr>
+          <td>{{ weather.weather[0].main }}</td>
+          <td>{{ weather.main.temp}}</td>
+          <td>{{ weather.main.temp_max }}</td>
+          <td>{{ weather.main.temp_min }}</td>
+          <td style="max-width: 100px;">
+            <div>
+                <button
+                        pButton
+                        pTooltip="Eliminar"
+                        tooltipPosition="bottom"
+                        (click)="deleteWeatherData(i)"
+                        pRipple
+                        icon="pi pi-trash"
+                        class="p-button-rounded p-button-info"
+                    ></button>
+            </div>
+            <br>
+            <div>
+                <button
+                        pButton
+                        pTooltip="navegar a pronostico 5 dias"
+                        tooltipPosition="bottom"
+                        (click)="navigateToForecast( weather.codigoPostal)"
+                        pRipple
+                        icon="pi pi-arrow-circle-right"
+                        class="p-button-rounded p-button-success"
+                    ></button>
+            </div>
+          </td>
+      </tr>
+      </ng-template>
+  </p-table>
+  </form>
